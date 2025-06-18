@@ -199,7 +199,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: '의 칠순을',
+                            text: '님의 칠순을',
                             style: Theme.of(context)
                                 .textTheme
                                 .headlineMedium
