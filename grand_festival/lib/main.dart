@@ -327,7 +327,7 @@ class _GuestBookPageState extends State<GuestBookPage> {
     },
     {
       'name': '공진용',
-      'message': '테스트',
+      'message': '해보자',
       'date': '2025-06-18',
     },
   ];
