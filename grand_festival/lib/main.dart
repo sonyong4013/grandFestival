@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '우리 가족의 누나이자 언니이자 고모이자',
+                      '우리 가족의 누나이자 언니이자',
                       style:
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
@@ -332,7 +332,8 @@ class _GuestBookPageState extends State<GuestBookPage> {
     },
     {
       'name': '공진용',
-      'message': '해보자',
+      'message':
+          '이번 칠순을 준비하면서 큰고모한테 참 받은 게 많다는 생각을 했어요. 제가 착하고 건실하게 자랄 수 있었던 건, 그리고 주변 사람들을 조금이라도 더 선하게 만드려고 했던 건, 모두 큰고모의 덕입니다. 감사합니다. 사랑합니다! 칠순 축하드려요!',
       'date': '2025-06-18',
     },
   ];
