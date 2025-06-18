@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '누나이자 언니이자 고모이자 큰고모이자',
+                      '우리 가족의 누나이자 언니이자 고모이자',
                       style:
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '큰이모인 ',
+                            text: '큰고모이자 큰이모인 ',
                             style: Theme.of(context)
                                 .textTheme
                                 .headlineMedium
@@ -173,25 +173,30 @@ class HomePage extends StatelessWidget {
                                   fontSize: 26,
                                 ),
                           ),
-                          TextSpan(
-                            text: '공정녀',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(
-                                  foreground: Paint()
-                                    ..shader = const LinearGradient(
-                                      colors: [
-                                        Colors.white,
-                                        Color(0xFFFFB74D),
-                                      ],
-                                    ).createShader(
-                                      const Rect.fromLTWH(
-                                          0.0, 0.0, 200.0, 70.0),
+                          WidgetSpan(
+                            alignment: PlaceholderAlignment.baseline,
+                            baseline: TextBaseline.alphabetic,
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 6),
+                              margin: const EdgeInsets.symmetric(horizontal: 4),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                '공정녀',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium
+                                    ?.copyWith(
+                                      color:
+                                          Theme.of(context).colorScheme.primary,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 32,
                                     ),
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 36,
-                                ),
+                              ),
+                            ),
                           ),
                           TextSpan(
                             text: '의 칠순을',
