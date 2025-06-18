@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
-                                fontSize: 26,
+                                fontSize: 20,
                               ),
                       textAlign: TextAlign.center,
                     ),
@@ -170,7 +170,7 @@ class HomePage extends StatelessWidget {
                                 ?.copyWith(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 26,
+                                  fontSize: 20,
                                 ),
                           ),
                           WidgetSpan(
@@ -193,7 +193,7 @@ class HomePage extends StatelessWidget {
                                       color:
                                           Theme.of(context).colorScheme.primary,
                                       fontWeight: FontWeight.w700,
-                                      fontSize: 32,
+                                      fontSize: 26,
                                     ),
                               ),
                             ),
@@ -206,7 +206,7 @@ class HomePage extends StatelessWidget {
                                 ?.copyWith(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 26,
+                                  fontSize: 20,
                                 ),
                           ),
                         ],
@@ -219,7 +219,7 @@ class HomePage extends StatelessWidget {
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
-                                fontSize: 26,
+                                fontSize: 20,
                               ),
                       textAlign: TextAlign.center,
                     ),
