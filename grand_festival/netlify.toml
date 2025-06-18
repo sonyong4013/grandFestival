@@ -1,5 +1,9 @@
 [build]
-  command = "flutter build web --release"
+  command = """
+    curl -fsSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.19.0-stable.tar.xz | tar xJ
+    export PATH="$PATH:$PWD/flutter/bin"
+    flutter build web --release
+  """
   publish = "build/web"
 
 [build.environment]
