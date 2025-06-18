@@ -133,7 +133,7 @@ class HomePage extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 300,
+                height: 260,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '우리 가족의 누나이자 언니이자',
+                      '우리 가족의 누나이자 언니이자 큰고모이자',
                       style:
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '큰고모이자 큰이모인 ',
+                            text: '큰이모인 ',
                             style: Theme.of(context)
                                 .textTheme
                                 .headlineMedium
@@ -214,7 +214,7 @@ class HomePage extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      '진심으로 축하드립니다',
+                      '진심으로 축하드립니다🎉',
                       style:
                           Theme.of(context).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
