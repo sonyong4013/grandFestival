@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '공정녀의 칠순을 축하 드립니다!',
+      title: '칠순 축하',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFFE57373), // 부드러운 분홍색
