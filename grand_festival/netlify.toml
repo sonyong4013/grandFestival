@@ -3,4 +3,9 @@
   publish = "build/web"
 
 [build.environment]
-  FLUTTER_VERSION = "3.19.0" 
+  FLUTTER_VERSION = "3.19.0"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
