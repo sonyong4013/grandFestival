@@ -1,6 +1,6 @@
 {
-    "name": "grand_festival",
-    "short_name": "grand_festival",
+    "name": "칠순축하",
+    "short_name": "칠순축하",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
