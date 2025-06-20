@@ -117,146 +117,223 @@ class HomePage extends StatelessWidget {
         foregroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.white,
-              Colors.pink[50]!,
-            ],
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 260,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Theme.of(context).colorScheme.primary.withOpacity(0.8),
-                      Theme.of(context).colorScheme.primary,
-                    ],
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '우리 가족의 누나이자 언니이자 큰고모이자',
-                      style:
-                          Theme.of(context).textTheme.headlineMedium?.copyWith(
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.white,
+                  Colors.pink[50]!,
+                ],
+              ),
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 260,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Theme.of(context)
+                              .colorScheme
+                              .primary
+                              .withOpacity(0.8),
+                          Theme.of(context).colorScheme.primary,
+                        ],
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '우리 가족의 누나이자 언니이자 큰고모이자',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20,
                               ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 16),
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: '큰이모인 ',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20,
-                                ),
-                          ),
-                          WidgetSpan(
-                            alignment: PlaceholderAlignment.baseline,
-                            baseline: TextBaseline.alphabetic,
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 6),
-                              margin: const EdgeInsets.symmetric(horizontal: 4),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                '공정녀',
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '큰이모인 ',
                                 style: Theme.of(context)
                                     .textTheme
                                     .headlineMedium
                                     ?.copyWith(
-                                      color:
-                                          Theme.of(context).colorScheme.primary,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w700,
-                                      fontSize: 26,
+                                      fontSize: 20,
                                     ),
                               ),
-                            ),
-                          ),
-                          TextSpan(
-                            text: '님의 칠순을',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20,
+                              WidgetSpan(
+                                alignment: PlaceholderAlignment.baseline,
+                                baseline: TextBaseline.alphabetic,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 6),
+                                  margin:
+                                      const EdgeInsets.symmetric(horizontal: 4),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    '공정녀',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 26,
+                                        ),
+                                  ),
                                 ),
+                              ),
+                              TextSpan(
+                                text: '님의 칠순을',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium
+                                    ?.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20,
+                                    ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      '진심으로 축하드립니다🎉',
-                      style:
-                          Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          '진심으로 축하드립니다🎉',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20,
                               ),
-                      textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _buildInfoSection(
+                          context,
+                          '일시',
+                          '2025년 6월 19일 (토) 오후 12시',
+                          Icons.calendar_today,
+                        ),
+                        const SizedBox(height: 32),
+                        _buildInfoSection(
+                          context,
+                          '장소',
+                          '경기 평택시 진위면 동천리 593 디세농원',
+                          Icons.location_on,
+                        ),
+                        const SizedBox(height: 32),
+                        _buildInfoSection(
+                          context,
+                          '지켜야할 것',
+                          '믿음 소망 사랑',
+                          Icons.favorite,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildInfoSection(
-                      context,
-                      '일시',
-                      '2025년 6월 19일 (토) 오후 12시',
-                      Icons.calendar_today,
-                    ),
-                    const SizedBox(height: 32),
-                    _buildInfoSection(
-                      context,
-                      '장소',
-                      '경기 평택시 진위면 동천리 593 디세농원',
-                      Icons.location_on,
-                    ),
-                    const SizedBox(height: 32),
-                    _buildInfoSection(
-                      context,
-                      '지켜야할 것',
-                      '믿음 소망 사랑',
-                      Icons.favorite,
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+          // D-day 위젯을 우측 상단에 배치
+          Positioned(
+            top: 5,
+            right: 8,
+            child: _buildDdayWidget(context),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDdayWidget(BuildContext context) {
+    // 음력 6월 11일을 양력으로 변환 (2025년 기준)
+    // 2025년 음력 6월 11일은 양력으로 2025년 7월 6일입니다
+    final birthday = DateTime(2025, 7, 6);
+    final now = DateTime.now();
+    final difference = birthday.difference(now).inDays;
+
+    String ddayText;
+    Color ddayColor;
+
+    if (difference > 0) {
+      ddayText = 'D-$difference';
+      ddayColor = Colors.red;
+    } else if (difference == 0) {
+      ddayText = 'D-Day!';
+      ddayColor = Colors.red;
+    } else {
+      ddayText = 'D+${difference.abs()}';
+      ddayColor = Colors.grey;
+    }
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Text(
+            '생일까지',
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey[600],
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            ddayText,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: ddayColor,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -322,8 +399,14 @@ class _GuestBookPageState extends State<GuestBookPage> {
   final List<Map<String, String>> _guestMessages = [
     {
       'name': '공종성',
-      'message': '하나님의 은혜로  가족과 이웃을 섬김의 기쁨으로 70년! 감사하고 사랑합니다',
+      'message': '하나님의 은혜로  가족과 이웃을 섬김의 기쁨으로 70년! \n감사하고 사랑합니다',
       'date': '2025-06-19',
+    },
+    {
+      'name': '박형주',
+      'message':
+          '큰이모 칠순 축하드립니다!\n\n큰이모께서 벌써 칠순이라는게 믿기지 않네요. 저보다 여전히 체력이 더 좋으신거 같은데말이죠.\n지금처럼 건강하시고, 늘 가족들을 위해 기도해주셔서 감사합니다.\n생신축하드려요!',
+      'date': '2025-06-20',
     },
     {
       'name': '김현정',
@@ -333,8 +416,14 @@ class _GuestBookPageState extends State<GuestBookPage> {
     {
       'name': '공진용',
       'message':
-          '이번 칠순을 준비하면서 큰고모한테 참 받은 게 많다는 생각을 했어요. 제가 착하고 건실하게 자랄 수 있었던 건, 그리고 주변 사람들을 조금이라도 더 선하게 만드려고 했던 건, 모두 큰고모의 덕입니다. 감사합니다. 사랑합니다! 칠순 축하드려요!',
+          '이번 칠순을 준비하면서 큰고모한테 참 받은 게 많다는 생각을 했어요.\n 제가 착하고 건실하게 자랄 수 있었던 건, 그리고 주변 사람들을 조금이라도 더 선하게 만드려고 했던 건, 모두 큰고모의 덕입니다.\n 감사합니다. 사랑합니다! 칠순 축하드려요!',
       'date': '2025-06-18',
+    },
+    {
+      'name': '공진성',
+      'message':
+          '큰고모 70번째 생신 축하드려요!\n\n진짜 70번째라는게 믿기시질 않는걸요? 형주형보다 배도 훨씬 덜 나오셨고, 아직도 40-50대 같으세요..\n\n 어렸을 때 큰고모 댁에서 배드민턴도 치고, 컴퓨터 게임하고, 컴퓨터 게임하고, 컴퓨터 게임하고 했던게 엊그제 같은데 시간이 너무 빠르네요.\n\n그래도 이제 다 직장들도 있고, 다들 잘 나가는 거 같으니 이제 조카 덕 보시길 바랍니다☺☺☺',
+      'date': '2025-06-20',
     },
   ];
 
@@ -392,7 +481,12 @@ class _GuestBookPageState extends State<GuestBookPage> {
                             ],
                           ),
                           const SizedBox(height: 8),
-                          Text(message['message']!),
+                          Text(
+                            message['message']!,
+                            style: const TextStyle(
+                              height: 1.5,
+                            ),
+                          ),
                         ],
                       ),
                     ),
