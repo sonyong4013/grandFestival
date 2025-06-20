@@ -321,12 +321,12 @@ class _GuestBookPageState extends State<GuestBookPage> {
   final TextEditingController _messageController = TextEditingController();
   final List<Map<String, String>> _guestMessages = [
     {
-      'name': '박형주',
-      'message': '테스트',
-      'date': '2025-06-18',
+      'name': '공종성',
+      'message': '하나님의 은혜로  가족과 이웃을 섬김의 기쁨으로 70년! 감사하고 사랑합니다',
+      'date': '2025-06-19',
     },
     {
-      'name': '김현정',
+      'name': '박형주',
       'message': '테스트',
       'date': '2025-06-18',
     },
@@ -556,7 +556,7 @@ class _GamePageState extends State<GamePage>
             children: [
               if (!_isGameStarted && !_isGameOver) ...[
                 const Text(
-                  '공진성 잡기 게임',
+                  '공진성을 잡아라!',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
