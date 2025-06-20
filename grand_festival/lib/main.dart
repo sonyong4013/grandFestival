@@ -326,9 +326,9 @@ class _GuestBookPageState extends State<GuestBookPage> {
       'date': '2025-06-19',
     },
     {
-      'name': '박형주',
-      'message': '테스트',
-      'date': '2025-06-18',
+      'name': '김현정',
+      'message': '칠순 진심으로 축하드립니다~~ 오래오래 건강하세요',
+      'date': '2025-06-20',
     },
     {
       'name': '공진용',
