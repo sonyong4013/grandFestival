@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFFE57373),
           secondary: const Color(0xFFFFB74D), // 부드러운 주황색
         ),
-        textTheme: GoogleFonts.notoSansKrTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        textTheme: GoogleFonts.notoSansKrTextTheme(Theme.of(context).textTheme),
         useMaterial3: true,
       ),
       home: const MainPage(),
@@ -63,10 +61,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: _pages,
-      ),
+      body: IndexedStack(index: _selectedIndex, children: _pages),
       bottomNavigationBar: _isGamePlaying
           ? null
           : NavigationBar(
@@ -108,10 +103,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           '♡',
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
@@ -124,10 +116,7 @@ class HomePage extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white,
-                  Colors.pink[50]!,
-                ],
+                colors: [Colors.white, Colors.pink[50]!],
               ),
             ),
             child: SingleChildScrollView(
@@ -141,10 +130,9 @@ class HomePage extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          Theme.of(context)
-                              .colorScheme
-                              .primary
-                              .withOpacity(0.8),
+                          Theme.of(
+                            context,
+                          ).colorScheme.primary.withOpacity(0.8),
                           Theme.of(context).colorScheme.primary,
                         ],
                       ),
@@ -154,10 +142,9 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(
                           '우리 가족의 누나이자 언니이자 큰고모이자',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20,
@@ -171,10 +158,9 @@ class HomePage extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: '큰이모인 ',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineMedium
-                                    ?.copyWith(
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineMedium?.copyWith(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w700,
                                       fontSize: 20,
@@ -185,19 +171,21 @@ class HomePage extends StatelessWidget {
                                 baseline: TextBaseline.alphabetic,
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
-                                      horizontal: 12, vertical: 6),
-                                  margin:
-                                      const EdgeInsets.symmetric(horizontal: 4),
+                                    horizontal: 12,
+                                    vertical: 6,
+                                  ),
+                                  margin: const EdgeInsets.symmetric(
+                                    horizontal: 4,
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Text(
                                     '공정녀',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineMedium
-                                        ?.copyWith(
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.headlineMedium?.copyWith(
                                           color: Theme.of(context)
                                               .colorScheme
                                               .primary,
@@ -209,10 +197,9 @@ class HomePage extends StatelessWidget {
                               ),
                               TextSpan(
                                 text: '님의 칠순을',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineMedium
-                                    ?.copyWith(
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineMedium?.copyWith(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w700,
                                       fontSize: 20,
@@ -224,10 +211,9 @@ class HomePage extends StatelessWidget {
                         const SizedBox(height: 16),
                         Text(
                           '진심으로 축하드립니다🎉',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.headlineMedium?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20,
@@ -270,11 +256,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           // D-day 위젯을 우측 상단에 배치
-          Positioned(
-            top: 5,
-            right: 8,
-            child: _buildDdayWidget(context),
-          ),
+          Positioned(top: 5, right: 8, child: _buildDdayWidget(context)),
         ],
       ),
     );
@@ -339,7 +321,11 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _buildInfoSection(
-      BuildContext context, String title, String content, IconData icon) {
+    BuildContext context,
+    String title,
+    String content,
+    IconData icon,
+  ) {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -376,10 +362,9 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
             content,
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: Colors.black87,
-                  height: 1.5,
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyLarge?.copyWith(color: Colors.black87, height: 1.5),
           ),
         ],
       ),
@@ -401,6 +386,12 @@ class _GuestBookPageState extends State<GuestBookPage> {
       'name': '공종성',
       'message': '하나님의 은혜로  가족과 이웃을 섬김의 기쁨으로 70년! \n감사하고 사랑합니다',
       'date': '2025-06-19',
+    },
+    {
+      'name': '공정욱',
+      'message':
+          '큰언니~~^^\n 힘들게 사느라 챙겨주지도 못하고 받고만 살았다는 생각이 드네\n 이런날이 올줄 생각도 못하고 살았는데~~^^ \n 오늘은 참 좋다 \n 결국에는 맏 언니하느라 수고 많았어 여태껏 말없이 물질로나 기도로 동생과 조카들까지 도와주고 사는 언니가 결과적으로 자랑스러워\n이런 저런일 많이 겪으면서 여기까지 온게 기적같으네~ \n그래도 조카들이 모여 언니의 삶 을 인정해 주네~ \n대신 고맙다는 말 을 꼭 해야 겠네~ \n짧게 인사 할게~ \n언니 수고 많이 했어 \n그리고 고마워~^^',
+      'date': '2025-06-20',
     },
     {
       'name': '박형주',
@@ -440,10 +431,7 @@ class _GuestBookPageState extends State<GuestBookPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Colors.white,
-              Colors.pink[50]!,
-            ],
+            colors: [Colors.white, Colors.pink[50]!],
           ),
         ),
         child: Column(
@@ -483,9 +471,7 @@ class _GuestBookPageState extends State<GuestBookPage> {
                           const SizedBox(height: 8),
                           Text(
                             message['message']!,
-                            style: const TextStyle(
-                              height: 1.5,
-                            ),
+                            style: const TextStyle(height: 1.5),
                           ),
                         ],
                       ),
@@ -504,10 +490,7 @@ class _GuestBookPageState extends State<GuestBookPage> {
 class GamePage extends StatefulWidget {
   final Function(bool) onGameStateChanged;
 
-  const GamePage({
-    super.key,
-    required this.onGameStateChanged,
-  });
+  const GamePage({super.key, required this.onGameStateChanged});
 
   @override
   State<GamePage> createState() => _GamePageState();
@@ -546,12 +529,15 @@ class _GamePageState extends State<GamePage>
 
       // 3개의 공진성 생성
       for (int i = 0; i < 3; i++) {
-        _targets.add(GongJinSeong(
-          x: _random.nextDouble() * (MediaQuery.of(context).size.width - 100),
-          y: _random.nextDouble() * (MediaQuery.of(context).size.height - 276),
-          isVisible: true,
-          rotation: 0.0,
-        ));
+        _targets.add(
+          GongJinSeong(
+            x: _random.nextDouble() * (MediaQuery.of(context).size.width - 100),
+            y: _random.nextDouble() *
+                (MediaQuery.of(context).size.height - 276),
+            isVisible: true,
+            rotation: 0.0,
+          ),
+        );
       }
     });
     _startRandomMovement();
@@ -638,10 +624,7 @@ class _GamePageState extends State<GamePage>
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Colors.white,
-              Colors.pink[50]!,
-            ],
+            colors: [Colors.white, Colors.pink[50]!],
           ),
         ),
         child: Center(
@@ -651,10 +634,7 @@ class _GamePageState extends State<GamePage>
               if (!_isGameStarted && !_isGameOver) ...[
                 const Text(
                   '공진성을 잡아라!',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 32),
                 ElevatedButton(
@@ -663,7 +643,9 @@ class _GamePageState extends State<GamePage>
                     backgroundColor: Theme.of(context).colorScheme.primary,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 32, vertical: 16),
+                      horizontal: 32,
+                      vertical: 16,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -673,10 +655,7 @@ class _GamePageState extends State<GamePage>
               ] else if (_isGameOver) ...[
                 const Text(
                   '게임 종료!',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
@@ -718,7 +697,9 @@ class _GamePageState extends State<GamePage>
                     backgroundColor: Theme.of(context).colorScheme.primary,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 32, vertical: 16),
+                      horizontal: 32,
+                      vertical: 16,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -759,8 +740,9 @@ class _GamePageState extends State<GamePage>
                                     duration: const Duration(milliseconds: 500),
                                     turns: _targets[i].rotation / 360,
                                     child: AnimatedOpacity(
-                                      duration:
-                                          const Duration(milliseconds: 500),
+                                      duration: const Duration(
+                                        milliseconds: 500,
+                                      ),
                                       opacity:
                                           _targets[i].isVisible ? 1.0 : 0.0,
                                       child: Image.asset(
